@@ -1,4 +1,5 @@
 //alert("Hello JS");
+// package-lock.json  was deleted before host to heroku server
 fetch ("http://localhost:3000/weather?address=Colombo").then( (response) => {
         response.json().then((data) => {
              if(data.error){
