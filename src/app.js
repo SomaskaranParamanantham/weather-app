@@ -8,7 +8,9 @@ const geocode = require("./utils/geocode.js");
 // Get the express server
 const app = express();
 
-console.log("Hello");
+console.log(process.env.PORT);
+
+const port = process.env.PORT || 3000;
 
 // Set the express server to use hbs view engine
 app.set("view engine", "hbs");
@@ -119,6 +121,6 @@ app.get("*", (req, res) => {
     });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Server is running on port 3000");
 })

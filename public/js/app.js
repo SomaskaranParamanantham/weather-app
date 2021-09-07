@@ -35,8 +35,9 @@ weatherForm.addEventListener("submit", (event) => {
         message1.textContent="Please provide an address.";
         message1.classList.add("error");
     }else{
-        fetch ("http://localhost:3000/weather?address="+ location).then( (response) => {
-        response.json().then((data) => {
+        //fetch ("http://localhost:3000/weather?address="+ location).then( (response) => {
+        fetch ("/weather?address="+ location).then( (response) => {
+            response.json().then((data) => {
              if(data.error){
                 // console.log(data.error);
                 message1.textContent=data.error;
