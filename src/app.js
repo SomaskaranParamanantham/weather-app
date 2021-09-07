@@ -8,6 +8,8 @@ const geocode = require("./utils/geocode.js");
 // Get the express server
 const app = express();
 
+console.log("Hello");
+
 // Set the express server to use hbs view engine
 app.set("view engine", "hbs");
 
